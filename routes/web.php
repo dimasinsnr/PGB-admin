@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DokumenController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BasicController;
 use App\Http\Controllers\UnitlatihanController;
@@ -72,4 +73,8 @@ Route::prefix('datakesehatan')->middleware('auth')->group(function () {
     foreach ($actions as $action) {
         Route::post($action, [DatakesehatanController::class, $action]);
     }
+});
+
+Route::controller(DokumenController::class)->prefix('dokumen_kesehatan')->name('dokumen_kesehatan.')->middleware('auth')->group(function () {
+    Route::get('/', 'index')->name('index');
 });
