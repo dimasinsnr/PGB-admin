@@ -77,4 +77,6 @@ Route::prefix('datakesehatan')->middleware('auth')->group(function () {
 
 Route::controller(DokumenController::class)->prefix('dokumen_kesehatan')->name('dokumen_kesehatan.')->middleware('auth')->group(function () {
     Route::get('/', 'index')->name('index');
+    Route::get('generate-doc', 'generateDoc')->name('generate-doc');
+    Route::get('test-doc', 'testDoc')->name('test-doc');
 });

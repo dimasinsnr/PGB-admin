@@ -1,14 +1,14 @@
 <script type="text/javascript">
     $(() => {
+        console.log("init")
         HELPER.api = {
-            generateDoc: BASE_URL + 'datakesehatan/initTable',
+            comboAnggota: BASE_URL + 'datakesehatan/comboAnggota',
+            generateDoc: BASE_URL + 'dokumen_kesehatan/generate-doc',
         };
         HELPER.createCombo({
             el: ['anggota_id'],
             valueField: 'anggota_id',
-            // grouped: true,
             displayField: 'anggota_nama',
-            // displayField2: 'unit_latihan_nama',
             placeholder: '-Pilih Anggota-',
             url: HELPER.api.comboAnggota,
             csrf: $('meta[name="csrf-token"]').attr('content'),
@@ -20,8 +20,8 @@
         var formData = new FormData(document.getElementById("form-dokumen"));
 
         $.ajax({
-            type: "POST",
             url: HELPER.api.generateDoc,
+            type: "POST",
             data: formData,
             contentType: false,
             processData: false,

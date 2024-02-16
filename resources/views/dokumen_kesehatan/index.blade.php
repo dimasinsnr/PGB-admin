@@ -26,7 +26,7 @@
             </div>
             <div class="card-body">
                 <div class="container-fluid">
-                    <form action="generateDoc()" class="d-flex w-100 flex-column" id="form-dokumen">
+                    <form action="{{ route('dokumen_kesehatan.generate-doc') }}" class="d-flex w-100 flex-column" id="form-dokumen">
                         <div class="row p-5">
                             <div class="col-6">
                                 <label for="" class="form-label mb-1" style="font-size: 15px">Anggota <span class="text-danger">*</span></label>
@@ -36,15 +36,13 @@
                                 </select>
                             </div>
                             <div class="col-6">
-                                <label for="" class="form-label mb-1" style="font-size: 15px">Jenis Pemeriksaan <span class="text-danger">*</span></label>
-                                <select id="jenis_pemeriksaan" name="jenis_pemeriksaan" class="custom-select form-control form-control-solid">
-                                    <option selected="" disabled="">Pilih Jenis Pemeriksaan</option>
-                                    <option value="tanda vital">Tanda Vital</option>
-                                    <option value="gula darah">Gula Darah</option>
-                                    <option value="kolestrol">Kolestrol</option>
-                                    <option value="komponen fisik">Komponen Fisik</option>
-                                    <option value="kebugaran jasmani">Kebugaran Jasmani</option>
-                                    <option value="asam urat">Asam Urat</option>
+                                <label for="" class="form-label mb-1" style="font-size: 15px">Periode Pemeriksaan <span class="text-danger">*</span></label>
+                                <select id="periode_pemeriksaan" name="periode_pemeriksaan" class="custom-select form-control form-control-solid">
+                                    <option selected="" disabled="">- Pilih Periode -</option>
+                                    <option value="3">Triwulan</option>
+                                    <option value="6">Semester</option>
+                                    <option value="12">Satu Tahun</option>
+                                    <option value="24">Dua Tahun</option>
                                 </select>
                             </div>
                         </div>

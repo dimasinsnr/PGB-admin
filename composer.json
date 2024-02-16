@@ -16,6 +16,7 @@
         "laravel/legacy-factories": "^1.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^4.0",
+        "mpdf/mpdf": "^8.2",
         "ramsey/uuid": "^4.7",
         "yajra/laravel-datatables": "10.0"
     },

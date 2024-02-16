@@ -84,7 +84,7 @@
         .custom-dropdown-menu a:hover {
             background-color: #f0f0f0; /* Warna latar belakang saat tautan dihover */
         }
-        
+
         td {
             vertical-align: middle !important;
         }
@@ -189,7 +189,7 @@
             bottom: 0;
             left: 0;
             font-size: smaller;
-            display: none; 
+            display: none;
         }
     </style>
 
@@ -242,6 +242,13 @@
             <a class="nav-link" href="{{ route('anggota.index') }}">
                 <i class="fas fa-fw fa-plus"></i>
                 <span style="font-size: 15px;">{{ __('Anggota PGB') }}</span>
+            </a>
+        </li>
+
+        <li class="pl-3 nav-item {{ Nav::isRoute('dokumen_kesehatan.index') }}">
+            <a class="nav-link" href="{{ route('dokumen_kesehatan.index') }}">
+                <i class="fas fa-fw fa-plus"></i>
+                <span style="font-size: 15px;">{{ __('Dokumen Kesehatan') }}</span>
             </a>
         </li>
 
@@ -547,6 +554,7 @@
 <script src="{{ asset('js/helper.js') }}"></script>
 <script src="{{ asset('js/jquery.blockUI.js') }}"></script>
 <script src="{{ asset('js/jquery-confirm.js') }}"></script>
+{{-- <script src="{{ asset('js/select2.full.min.js') }}"></script> --}}
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>z
 
@@ -578,7 +586,7 @@ function fungsiBatasan($koefisienBatasan, $variabel) {
 function pemrogramanLinier($koefisienTujuan, $batasan, $batasanNilai) {
     $nVariabel = count($koefisienTujuan);
     $nBatasan = count($batasan);
-    
+
     // Inisialisasi variabel
     $variabel = array_fill(0, $nVariabel, 0);
 
