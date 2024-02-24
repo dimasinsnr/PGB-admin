@@ -556,7 +556,14 @@
 <script src="{{ asset('js/jquery-confirm.js') }}"></script>
 {{-- <script src="{{ asset('js/select2.full.min.js') }}"></script> --}}
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://unpkg.com/@popperjs/core@2"></script>z
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+<script src="https://cdn.amcharts.com/lib/version/5.8.4/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/version/5.8.4/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/version/5.8.4/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/version/5.8.4/locales/de_DE.js"></script>
 
 @stack('js')
 </body>
