@@ -26,7 +26,7 @@
             </div>
             <div class="card-body">
                 <div class="container-fluid">
-                    <form action="{{ route('dokumen_kesehatan.generate-doc') }}" class="d-flex w-100 flex-column" id="form-dokumen">
+                    <form action="javascript:generateDoc()" class="d-flex w-100 flex-column" id="form-dokumen">
                         <div class="row p-5">
                             <div class="col-6">
                                 <label for="" class="form-label mb-1" style="font-size: 15px">Anggota <span class="text-danger">*</span></label>
@@ -49,10 +49,28 @@
                         <div class="w-100 d-flex justify-content-end p-5">
                             <button role="button" type="button" class="btn btn-md btn-warning mr-2" onclick="clear()">Reset</button>
                             <button type="submit" class="btn btn-md btn-success">
-                                Export
+                                Preview
                             </button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-bordered preview-el mt-4" style="border-top-radius: 15px !important">
+            <div class="card-header pt-4 pb-4 d-flex align-items-center 100">
+                <div class="card-title d-flex align-items-center mb-0 ml-3 mr-3">
+                    <h3 class="card-label ml-2 mb-0"><b>{{ __('Preview') }}</b></h3>
+                </div>
+                <div class="card-toolbar ml-auto">
+                    <button class="btn btn-success" onclick="downloadPDF()">Export</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="" id="preview">
+
+                    </div>
                 </div>
             </div>
         </div>
