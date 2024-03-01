@@ -200,6 +200,10 @@
                 })
             );
 
+            series.strokes.template.setAll({
+                strokeWidth: 4,
+            });
+
             series.data.setAll(data);
 
             series.bullets.push(function() {
@@ -212,6 +216,7 @@
                     })
                 });
             });
+
         }
 
         createColumnSeries("Systol Awal", "systol_awal");
@@ -231,14 +236,33 @@
         );
         legend.data.setAll(chart.series.values);
 
-        setTimeout(() => {
-            html2canvas(document.querySelector("#chart-vitality-container")).then(canvas => {
-                var imgData = canvas.toDataURL('image/png');
-                $('#chart-vitality-container').html(
-                    `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`);
+        var annotator = am5plugins_exporting.Annotator.new(root, {});
+        annotator.open();
+        var marker = null;
+
+        annotator.getMarkerArea().then((value) => {
+            value.addEventListener("close", () => {
+                HELPER.block();
+                setTimeout(() => {
+                    html2canvas(document.querySelector("#chart-vitality-container")).then(
+                        canvas => {
+                            var imgData = canvas.toDataURL('image/png');
+                            $('#chart-vitality-container').html(
+                                `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`
+                            );
+                            HELPER.unblock();
+                        });
+                }, 500)
+
+                // exporting.exportImage('jpeg').then(function(imgData) {
+                //     $('#chart-vitality-container').html(
+                //         `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`
+                //     );
+                // });
             });
-            HELPER.unblock();
-        }, 2000)
+        })
+
+        HELPER.unblock();
     }
 
     function loadChBloodSugar(data) {
@@ -296,7 +320,7 @@
 
             series.columns.template.setAll({
                 tooltipY: am5.percent(10),
-                templateField: "columnSettings"
+                fill: am5.color(0x49eb34)
             });
 
             series.bullets.push(function() {
@@ -352,14 +376,33 @@
         // );
         // legend.data.setAll(chart.series.values);
 
-        setTimeout(() => {
-            html2canvas(document.querySelector("#chart-blood-sugar-container")).then(canvas => {
-                var imgData = canvas.toDataURL('image/png');
-                $('#chart-blood-sugar-container').html(
-                    `<img src="${imgData}" alt="ch-blood-sugar" class="border" style="height: 500px">`);
+        var annotator = am5plugins_exporting.Annotator.new(root, {});
+        annotator.open();
+        var marker = null;
+
+        annotator.getMarkerArea().then((value) => {
+            value.addEventListener("close", () => {
+                HELPER.block();
+                setTimeout(() => {
+                    html2canvas(document.querySelector("#chart-blood-sugar-container")).then(
+                        canvas => {
+                            var imgData = canvas.toDataURL('image/png');
+                            $('#chart-blood-sugar-container').html(
+                                `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`
+                            );
+                            HELPER.unblock();
+                        });
+                }, 500)
+
+                // exporting.exportImage('jpeg').then(function(imgData) {
+                //     $('#chart-vitality-container').html(
+                //         `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`
+                //     );
+                // });
             });
-            HELPER.unblock();
-        }, 2000)
+        })
+
+        HELPER.unblock();
     }
 
     function loadChCholestrol(data) {
@@ -417,7 +460,7 @@
 
             series.columns.template.setAll({
                 tooltipY: am5.percent(10),
-                templateField: "columnSettings"
+                fill: am5.color(0x245cd4)
             });
 
             series.bullets.push(function() {
@@ -473,14 +516,33 @@
         // );
         // legend.data.setAll(chart.series.values);
 
-        setTimeout(() => {
-            html2canvas(document.querySelector("#chart-cholestrol-container")).then(canvas => {
-                var imgData = canvas.toDataURL('image/png');
-                $('#chart-cholestrol-container').html(
-                    `<img src="${imgData}" alt="ch-cholestrol" class="border" style="height: 500px">`);
+        var annotator = am5plugins_exporting.Annotator.new(root, {});
+        annotator.open();
+        var marker = null;
+
+        annotator.getMarkerArea().then((value) => {
+            value.addEventListener("close", () => {
+                HELPER.block();
+                setTimeout(() => {
+                    html2canvas(document.querySelector("#chart-cholestrol-container")).then(
+                        canvas => {
+                            var imgData = canvas.toDataURL('image/png');
+                            $('#chart-cholestrol-container').html(
+                                `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`
+                            );
+                            HELPER.unblock();
+                        });
+                }, 500)
+
+                // exporting.exportImage('jpeg').then(function(imgData) {
+                //     $('#chart-vitality-container').html(
+                //         `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`
+                //     );
+                // });
             });
-            HELPER.unblock();
-        }, 2000)
+        })
+
+        HELPER.unblock();
     }
 
     function loadChJointAcidity(data) {
@@ -538,7 +600,7 @@
 
             series.columns.template.setAll({
                 tooltipY: am5.percent(10),
-                templateField: "columnSettings"
+                fill: am5.color(0xced424)
             });
 
             series.bullets.push(function() {
@@ -594,14 +656,33 @@
         // );
         // legend.data.setAll(chart.series.values);
 
-        setTimeout(() => {
-            html2canvas(document.querySelector("#chart-joint-acidity-container")).then(canvas => {
-                var imgData = canvas.toDataURL('image/png');
-                $('#chart-joint-acidity-container').html(
-                    `<img src="${imgData}" alt="ch-joint-acidity" class="border" style="height: 500px">`);
+        var annotator = am5plugins_exporting.Annotator.new(root, {});
+        annotator.open();
+        var marker = null;
+
+        annotator.getMarkerArea().then((value) => {
+            value.addEventListener("close", () => {
+                HELPER.block();
+                setTimeout(() => {
+                    html2canvas(document.querySelector("#chart-joint-acidity-container")).then(
+                        canvas => {
+                            var imgData = canvas.toDataURL('image/png');
+                            $('#chart-joint-acidity-container').html(
+                                `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`
+                            );
+                            HELPER.unblock();
+                        });
+                }, 500)
+
+                // exporting.exportImage('jpeg').then(function(imgData) {
+                //     $('#chart-vitality-container').html(
+                //         `<img src="${imgData}" alt="ch-vitality" class="border" style="height: 500px">`
+                //     );
+                // });
             });
-            HELPER.unblock();
-        }, 2000)
+        })
+
+        HELPER.unblock();
     }
 
     function downloadPDF() {

@@ -327,6 +327,7 @@
         <span>Catatan: -</span>
 
         <div class="p3 mt-3" id="chart-vitality-container">
+            <div id="ch-vitality-toolbar"></div>
             <div id="ch-vitality" style="height: 500px"></div>
         </div>
     </div>

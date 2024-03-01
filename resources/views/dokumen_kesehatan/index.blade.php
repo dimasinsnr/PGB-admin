@@ -63,6 +63,7 @@
                     <h3 class="card-label ml-2 mb-0"><b>{{ __('Preview') }}</b></h3>
                 </div>
                 <div class="card-toolbar ml-auto">
+                    <button class="btn btn-primary" onclick="generateDoc()">Reset</button>
                     <button class="btn btn-success" onclick="downloadPDF()">Export</button>
                 </div>
             </div>
