@@ -562,8 +562,10 @@
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 <script src="https://cdn.amcharts.com/lib/version/5.8.4/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/version/5.8.4/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
 <script src="https://cdn.amcharts.com/lib/version/5.8.4/themes/Animated.js"></script>
 <script src="https://cdn.amcharts.com/lib/version/5.8.4/locales/de_DE.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/stock.js"></script>
 
 @stack('js')
 </body>
